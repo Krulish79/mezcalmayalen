@@ -9,3 +9,6 @@ assets/agavesreal/
 # Editor/tmp
 _ficha.html
 *.tmp
+
+# Source recipe photos (web versions live in assets/web/receta-*.webp)
+assets/RecipiePictures/
