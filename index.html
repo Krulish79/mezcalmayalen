@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B0A09" />
+
+<title>Mezcal Mayalen — Herbario de magueyes silvestres</title>
+<meta name="description" content="Seis magueyes silvestres destilados en un palenque de 1949 en la sierra de Guerrero. Cupreata, Tobalá, Barril, Coyote, Cuishe y Guerrero." />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mezcal Mayalen" />
+<meta property="og:title" content="Mezcal Mayalen — Herbario de magueyes silvestres" />
+<meta property="og:description" content="Seis magueyes silvestres. Sierra de Guerrero y valles de Oaxaca." />
+<meta property="og:image" content="assets/web/hero-bottles.webp" />
+<meta property="og:url" content="https://mezcalmayalen.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="canonical" href="https://mezcalmayalen.com/" />
+<link rel="icon" type="image/webp" href="assets/web/logo-sello.webp" />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-normal-300.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/eb-garamond-normal-400.woff2" crossorigin />
+<link rel="preload" as="image" href="assets/web/hero-bottles.webp" />
+<link rel="stylesheet" href="css/style.css?v=3" />
+</head>
+
+<body class="is-locked">
+
+<!-- ════════════════════════════  UMBRAL  ════════════════════════════ -->
+<div class="umbral" id="umbral" role="dialog" aria-modal="true" aria-labelledby="umbralTitle">
+  <div class="umbral__card">
+    <img class="umbral__sello" src="assets/web/logo-hero.webp" alt="" aria-hidden="true" width="900" height="900" />
+    <p class="eyebrow" data-i18n="umbralEyebrow">Mezcal Mayalen</p>
+    <h1 class="umbral__title" id="umbralTitle" data-i18n="umbralTitle">¿Eres mayor de edad?</h1>
+    <p class="umbral__sub" data-i18n="umbralSub">Para entrar necesitas tener la edad legal para consumir alcohol<br>en tu país.</p>
+    <div class="umbral__acts">
+      <button class="btn" id="umbralYes" data-i18n="umbralYes">Sí, soy mayor de edad</button>
+      <button class="btn btn--ghost" id="umbralNo" data-i18n="umbralNo">No</button>
+    </div>
+    <p class="umbral__legal" data-i18n="umbralLegal">Bébelo con moderación. Venta exclusiva a mayores de edad.</p>
+    <p class="umbral__deny" id="umbralDeny" data-i18n="umbralDeny" hidden>Vuelve cuando tengas la edad legal. Aquí te esperamos.</p>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════  CABECERA  ════════════════════════════ -->
+<header class="head" id="head">
+  <div class="head__in">
+    <a class="mark" href="#portada" aria-label="Mayalen">
+      <img class="mark__sello" src="assets/web/logo-iso-round.webp" alt="" aria-hidden="true" width="217" height="217" />
+      <span class="mark__word">Mezcal Mayalen</span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#cuaderno" data-i18n="navCuaderno">Historia</a>
+      <a href="#herbario" data-i18n="navHerbario">Colección</a>
+      <a href="#procedencia" data-i18n="navProcedencia">Regiones</a>
+      <a href="#galeria" data-i18n="navGaleria">Galería</a>
+      <a href="#cocteleria" data-i18n="navReceta">Coctelería</a>
+      <a href="#fichas" data-i18n="navFichas">Fichas</a>
+      <a href="#correspondencia" data-i18n="navCorrespondencia">Contacto</a>
+    </nav>
+
+    <div class="head__tools">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button class="lang__b is-on" data-set-lang="es" type="button">Español</button>
+        <span aria-hidden="true">·</span>
+        <button class="lang__b" data-set-lang="en" type="button">English</button>
+      </div>
+      <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main>
+
+<!-- ════════════════════════════  PORTADA  ════════════════════════════ -->
+<section class="portada" id="portada">
+  <img class="portada__bg" src="assets/web/hero-bottles.webp" alt="" aria-hidden="true" width="2600" height="1463" />
+  <div class="portada__veil" aria-hidden="true"></div>
+
+  <div class="portada__in">
+    <img class="portada__sello" src="assets/web/logo-hero.webp" alt="Mezcal Mayalen" width="900" height="900" />
+    <p class="eyebrow eyebrow--light" data-i18n="portadaEyebrow">100% agaves silvestres orgánicos</p>
+    <h1 class="portada__word">Mezcal Mayalen</h1>
+    <p class="portada__sub" data-i18n="portadaSub">Sierra de Guerrero &middot; Valles de Oaxaca</p>
+  </div>
+
+  <ol class="indice" aria-label="Láminas">
+    <li><a href="#cupreata"><span class="indice__dot" style="--c:#ADA79D"></span><span class="indice__n">I</span><span class="indice__t">Cupreata</span></a></li>
+    <li><a href="#tobala"><span class="indice__dot" style="--c:#3E86B8"></span><span class="indice__n">II</span><span class="indice__t">Tobalá</span></a></li>
+    <li><a href="#barril"><span class="indice__dot" style="--c:#9E3F4B"></span><span class="indice__n">III</span><span class="indice__t">Barril</span></a></li>
+    <li><a href="#coyote"><span class="indice__dot" style="--c:#B2926A"></span><span class="indice__n">IV</span><span class="indice__t">Coyote</span></a></li>
+    <li><a href="#cuishe"><span class="indice__dot" style="--c:#5FA07E"></span><span class="indice__n">V</span><span class="indice__t">Cuishe</span></a></li>
+    <li><a href="#guerrero"><span class="indice__dot" style="--c:#F072AC"></span><span class="indice__n">VI</span><span class="indice__t">Guerrero</span></a></li>
+  </ol>
+
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+
+<!-- ════════════════════════════  CUADERNO  ════════════════════════════ -->
+<section class="cuaderno" id="cuaderno">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow" data-i18n="cuadernoEyebrow">Desde 1949</p>
+      <h2 class="h-title" data-i18n="cuadernoTitle">Nuestra historia</h2>
+    </header>
+  </div>
+
+  <div class="cuaderno__lead wrap reveal">
+    <p class="drop" data-i18n="cuadernoP1">Nuestra marca comenzó con la intención de crear una bebida para amigos y familiares, enfocándonos en la selección de plantas maduras de agave silvestre.</p>
+  </div>
+
+  <!-- díptico fotográfico -->
+  <div class="diptico wrap reveal">
+    <figure class="diptico__a">
+      <img src="assets/web/foto-alambique.webp" alt="Alambique de cobre grabado con el nombre Mayalen" width="1900" height="1263" loading="lazy" />
+      <figcaption data-i18n="capAlambique">Alambique de cobre. Palenque Mayalen, sierra de Guerrero.</figcaption>
+    </figure>
+    <figure class="diptico__b">
+      <img src="assets/web/foto-agaves-bn.webp" alt="Magueyes silvestres sobre ladera de piedra" width="1500" height="1000" loading="lazy" />
+      <figcaption data-i18n="capLadera">Magueyes silvestres sobre ladera de piedra.</figcaption>
+    </figure>
+  </div>
+
+  <div class="cuaderno__grid wrap reveal">
+    <div class="cuaderno__col">
+      <p data-i18n="cuadernoP2">Adquirimos un palenque rústico que había estado activo desde 1949 en la sierra de Guerrero, donde hasta hoy disfrutamos de la cultura artesanal de nuestros Maestros Mezcaleros, cuyo conocimiento en la elaboración del mezcal les ha sido transmitido como parte de su herencia familiar.</p>
+      <p data-i18n="cuadernoP3">La operación del proceso es supervisada meticulosamente por nuestros Maestros Mezcaleros. Respetamos la singularidad de cada lote y su esencia original. Nuestro producto es 100% artesanal y orgánico.</p>
+    </div>
+    <dl class="datos">
+      <div><dt data-i18n="dato1">Año del palenque</dt><dd>1949</dd></div>
+      <div><dt data-i18n="dato2">Agaves</dt><dd data-i18n="dato2v">Seis agaves silvestres</dd></div>
+      <div><dt data-i18n="dato3">Cultivo</dt><dd data-i18n="dato3v">Silvestre y orgánico</dd></div>
+      <div><dt data-i18n="dato4">Destilación</dt><dd data-i18n="dato4v">Alambique de cobre</dd></div>
+    </dl>
+  </div>
+</section>
+
+
+
+
+<!-- ════════════════════════════  HERBARIO  ════════════════════════════ -->
+<section class="herbario" id="herbario">
+  <div class="wrap">
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow" data-i18n="herbarioEyebrow">Seis agaves silvestres</p>
+      <h2 class="h-title" data-i18n="herbarioTitle">La colección</h2>
+      <p class="sec-head__sub" data-i18n="herbarioSub">Seis mezcales, cada uno de un agave silvestre distinto. Cada etiqueta lleva su color, su tierra y su carácter.</p>
+    </header>
+  </div>
+
+  <!-- ── I · CUPREATA ── -->
+  <article class="plate" id="cupreata" data-agave="cupreata">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">I</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-cupreata.webp" alt="Botella Mayalen Cupreata" width="315" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>01</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="cupreataLocal">Cupreata</p>
+        <h3 class="plate__name">Wild Cupreata</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">46.5% Alc. Vol. &middot; 93 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="cupreataP">Mezcal Wild Cupreata es nuestra variedad original y más compleja. Este agave se encuentra en la cuenca del río Balsas, en las altas montañas del estado de Guerrero, al sur de México. Esta variedad crece de forma silvestre sobre las rocosas laderas, lugar ideal para la absorción de minerales, resultando así en su sabor único. El agave Cupreata es conocido localmente como maguey Papalote. La edad de maduración de este agave ocurre entre 8 y 16 años, asegurando una concentración ideal de azúcares naturales y minerales en el corazón del agave o piña.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="cupreataProc">Cuenca del Balsas, Guerrero</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>1,200–1,600 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="cupreataSuelo">Ladera rocosa, rica en minerales</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="cupreataMad">8 a 16 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="cupreataN">Aroma cítrico y mineral, con cuerpo sedoso al agitar la copa, sabor ligero dulce, con un retrogusto sutil de chocolate obscuro.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── II · TOBALÁ ── -->
+  <article class="plate plate--flip" id="tobala" data-agave="tobala">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">II</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-tobala.webp" alt="Botella Mayalen Tobalá" width="321" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>02</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="tobalaLocal">Recolección silvestre</p>
+        <h3 class="plate__name">Wild Tobalá</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">47% Alc. Vol. &middot; 94 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="tobalaP">Elaborado con una variedad de agave silvestre muy cotizado. La etiqueta Mayalen Tobalá forma parte de nuestra familia de productos de mezcal de alta calidad. Mayalen Tobalá ha sido diseñado como un destilado de alta gama para ser degustado lentamente y apreciado por conocedores. En colaboración con las comunidades locales y nuestro Maestro Mezcalero, Mayalen forma parte de los programas que garantizan la sustentabilidad de las especies de agave silvestre.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="tobalaProc">Valles de Oaxaca</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>1,600–2,200 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="tobalaSuelo">Monte alto, entre encinos</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="tobalaMad">10 a 15 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="tobalaN">Sabor a hierbas frescas en el paladar acompañadas de cáscara de mandarina tostada con terminación en tonos dulces de chocolate obscuro.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── III · BARRIL ── -->
+  <article class="plate" id="barril" data-agave="barril">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">III</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-barril.webp" alt="Botella Mayalen Barril" width="314" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>03</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="barrilLocal">Familia karwinskii</p>
+        <h3 class="plate__name">Wild Barril</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">48% Alc. Vol. &middot; 96 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="barrilP">El Mezcal Barril procede de Oaxaca, una excelente bebida nacida del singular agave Barril de la familia Karwinskii, conocido por sus hojas puntiagudas y su predilección por los veranos templados. Se elabora a partir de agaves cultivados en los suelos rocosos de las tierras de nuestro Maestro Mezcalero, situadas cerca de Matatlán. La meticulosa producción y el distintivo terruño lo dotan de una profunda complejidad y riqueza, personificando la diversa esencia de la herencia mezcalera de Oaxaca.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="barrilProc">Matatlán, Oaxaca</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>1,800 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="barrilSuelo">Pedregoso, de verano templado</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="barrilMad">12 a 14 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="barrilN">Fragante mezcla de fruta madura y suave ahumado en nariz, con susurros de hierbas frescas. Al agitarlo se revela un cuerpo suave y rico, que conduce a un paladar con capas de agave dulce y toques terrosos.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── IV · COYOTE ── -->
+  <article class="plate plate--flip" id="coyote" data-agave="coyote">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">IV</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-coyote.webp" alt="Botella Mayalen Coyote" width="314" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>04</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="coyoteLocal">Especie micro endémica</p>
+        <h3 class="plate__name">Wild Coyote</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">48% Alc. Vol. &middot; 96 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="coyoteP">El Agave Americana, comúnmente conocido como Coyote, es una especie de agave silvestre que crece en una estrecha zona del estado de Oaxaca. Se considera una especie micro endémica, por lo que la producción de mezcal de esta variedad es limitada y muy valorada. Con la colaboración de la comunidad local y del Maestro Mezcalero, nuestra etiqueta Mayalen Coyote forma parte de nuestra cartera de bebidas espirituosas de alta calidad.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="coyoteProc">Sierra de Oaxaca</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>1,700–2,000 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="coyoteSuelo">Franja micro endémica</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="coyoteMad">14 a 18 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="coyoteN">Suave sabor de cítricos tostados en comal que da paso gradualmente a la madera terrosa y se funde delicadamente con un elegante final.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── V · CUISHE ── -->
+  <article class="plate" id="cuishe" data-agave="cuishe">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">V</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-cuishe.webp" alt="Botella Mayalen Cuishe" width="314" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>05</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="cuisheLocal">Familia karwinskii</p>
+        <h3 class="plate__name">Wild Cuishe</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">48% Alc. Vol. &middot; 96 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="cuisheP">Originario de las tierras altas de Oaxaca, el agave Cuishe pertenece a la familia Karwinskii, de hojas alargadas y con preferencia por los veranos de temperaturas suaves. Este agave en particular procede de las tierras del padre de José Hernández, nuestro Maestro Mezcalero, cerca de la provincia de Matatlán, a una altitud de 2,000 metros (6,700 pies), donde crece en suelos pedregosos.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="cuisheProc">Matatlán, Oaxaca</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>2,000 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="cuisheSuelo">Pedregoso de altura</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="cuisheMad">12 a 16 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="cuisheN">Color transparente, con apreciación herbal compleja, ligero aroma cítrico a toronja y acabado prolongado con sensación a penca ahumada.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── VI · GUERRERO ── -->
+  <article class="plate plate--flip" id="guerrero" data-agave="guerrero">
+    <div class="plate__glow" aria-hidden="true"></div>
+    <span class="plate__ghost" aria-hidden="true">VI</span>
+    <div class="wrap plate__in">
+      <div class="plate__stage reveal">
+        <img class="plate__bottle" src="assets/web/botella-guerrero.webp" alt="Botella Mayalen Guerrero" width="317" height="1500" loading="lazy" />
+      </div>
+      <div class="plate__desc reveal">
+        <p class="plate__index"><span>06</span><span>/ 06</span></p>
+        <p class="plate__local" data-i18n="guerreroLocal">Cupreata &middot; alta graduación</p>
+        <h3 class="plate__name">Guerrero</h3>
+        <div class="plate__meta">
+          <p class="plate__abv">52% Alc. Vol. &middot; 104 proof</p>
+        </div>
+        <p class="plate__body" data-i18n="guerreroP">Nuestra variedad de Guerrero fue inspirada por los que son guerreros de corazón. Es elegante, con una consistencia balanceada y distinguida. Con alto porcentaje de alcohol, su apreciación de cuerpo fuerte y compleja libera su aroma con facilidad al agitar la copa, haciéndolo una bebida de pura excelencia. Es popular y tiene una alta demanda, especialmente entre los grandes conocedores de mezcal.</p>
+        <dl class="specimen">
+          <div><dt data-i18n="sProc">Origen</dt><dd data-i18n="guerreroProc">Sierra alta de Guerrero</dd></div><div><dt data-i18n="sAlt">Altitud</dt><dd>1,400–1,800 m</dd></div>
+          <div><dt data-i18n="sSuelo">Suelo</dt><dd data-i18n="guerreroSuelo">Ladera rocosa</dd></div>
+          <div><dt data-i18n="sMad">Maduración</dt><dd data-i18n="guerreroMad">8 a 16 años</dd></div>
+        </dl>
+        <p class="nota"><span class="nota__l" data-i18n="sNota">Nota de cata</span><span data-i18n="guerreroN">Calidez alcohólica inicial con presencia de un cuerpo denso y dulce con retrogusto sutil de chocolate obscuro lo hace ideal para catar con nueces. Notas herbales continúan hasta el final.</span></p>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+
+
+
+<!-- ════════════════════════════  PROCEDENCIA  ════════════════════════════ -->
+<section class="proc" id="procedencia">
+  <div class="wrap">
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow" data-i18n="procEyebrow">Guerrero y Oaxaca</p>
+      <h2 class="h-title" data-i18n="procTitle">Regiones</h2>
+      <p class="sec-head__sub" data-i18n="procSub">De dónde viene cada mezcal.</p>
+    </header>
+
+
+    <div class="proc__grid3 reveal">
+      <article class="region" data-region="guerrero" style="--c:#8E2B2B">
+        <div class="region__head">
+          <span class="region__map" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow" data-i18n="procLamsGro">Sierra y río Balsas</p>
+            <h3>Guerrero</h3>
+          </div>
+        </div>
+        <p data-i18n="procGro">Sierra alta y cuenca del río Balsas. Laderas de piedra donde el papalote madura más de diez años. Aquí está el palenque de 1949.</p>
+        <ul class="region__agaves">
+          <li><a href="#cupreata"><img src="assets/web/agave-cupreata.webp" alt="Acuarela del agave Cupreata" loading="lazy" /><span>Wild Cupreata</span></a></li>
+          <li><a href="#guerrero"><img src="assets/web/agave-guerrero.webp" alt="Acuarela del agave Papalote" loading="lazy" /><span>Guerrero</span></a></li>
+        </ul>
+      </article>
+      <figure class="proc__mapa">
+      <img src="assets/web/mapa-mexico.png" alt="Mapa de México con Guerrero, Oaxaca y Ciudad de México señalados" width="887" height="600" loading="lazy" />
+      <span class="pin" style="--x:51%;--y:85%;--c:#8E2B2B"><i aria-hidden="true"></i><em>Guerrero</em></span>
+      <span class="pin" style="--x:66%;--y:85%;--c:#B8901F"><i aria-hidden="true"></i><em>Oaxaca</em></span>
+      <span class="pin" style="--x:57%;--y:75%;--c:#8C93A0"><i aria-hidden="true"></i><em data-i18n="procCdmxT">Ciudad de México</em></span>
+    </figure>
+      <article class="region" data-region="oaxaca" style="--c:#B8901F">
+        <div class="region__head">
+          <span class="region__map" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow" data-i18n="procLamsOax">Valles y monte alto</p>
+            <h3>Oaxaca</h3>
+          </div>
+        </div>
+        <p data-i18n="procOax">Valles y monte alto alrededor de Matatlán, hasta los dos mil metros, en suelos pedregosos que la familia de nuestro maestro mezcalero trabaja desde hace generaciones.</p>
+        <ul class="region__agaves">
+          <li><a href="#tobala"><img src="assets/web/agave-tobala.webp" alt="Acuarela del agave Tobalá" loading="lazy" /><span>Wild Tobalá</span></a></li>
+          <li><a href="#barril"><img src="assets/web/agave-barril.webp" alt="Acuarela del agave Barril" loading="lazy" /><span>Wild Barril</span></a></li>
+          <li><a href="#coyote"><img src="assets/web/agave-coyote.webp" alt="Acuarela del agave Coyote" loading="lazy" /><span>Wild Coyote</span></a></li>
+          <li><a href="#cuishe"><img src="assets/web/agave-cuishe.webp" alt="Acuarela del agave Cuishe" loading="lazy" /><span>Wild Cuishe</span></a></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="region__casa reveal">
+      <p class="eyebrow" data-i18n="procCasa">Casa de la marca</p>
+      <h3 data-i18n="procCdmxT">Ciudad de México</h3>
+      <p data-i18n="procCdmx">Desde aquí atendemos distribución, restaurantes y catas privadas.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════  GALERÍA  ════════════════════════════ -->
+<section class="galeria" id="galeria">
+  <div class="wrap">
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow" data-i18n="galEyebrow">Del palenque al campo</p>
+      <h2 class="h-title" data-i18n="galTitle">Galería</h2>
+    </header>
+    <div class="galeria__grid reveal">
+      <figure><img src="assets/web/gallery/pina-coa.webp" alt="Piña de agave cortada con coa" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/horno-encendido.webp" alt="Cocción del agave sobre piedra" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/horno-pit.webp" alt="Horno de piedra del palenque" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/tinas.webp" alt="Tinas de fermentación en madera" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/pina-mano.webp" alt="Piña de agave en mano" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/copita.webp" alt="Copita de mezcal recién servido" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/recoleccion.webp" alt="Recolección de agave en la sierra" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/jima.webp" alt="Jima del agave en el campo" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/agave-cielo.webp" alt="Maguey silvestre contra el cielo" loading="lazy" /></figure>
+      <figure><img src="assets/web/gallery/campo.webp" alt="Campo de magueyes silvestres" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════  COCTELERÍA  ════════════════════════════ -->
+<section class="recetas" id="cocteleria">
+  <div class="wrap">
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow" data-i18n="recEyebrow">Para servir</p>
+      <h2 class="h-title" data-i18n="recTitle">Coctelería</h2>
+      <p class="sec-head__sub" data-i18n="recSub">Una copa para cada maguey.</p>
+    </header>
+    <div class="recetas__grid reveal">
+      <article class="receta" style="--c:#ADA79D">
+        <img class="receta__img" src="assets/web/botella-cupreata.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Wild Cupreata</p>
+        <h3 class="receta__name">Paloma Silvestre</h3>
+        <p class="receta__ing" data-i18n="cupreataIng">45 ml Wild Cupreata · jugo de toronja · limón · agua mineral · sal de gusano</p>
+        <p class="receta__met" data-i18n="cupreataMet">Sobre hielo, remata con soda y escarcha con sal de gusano.</p>
+      </article>
+      <article class="receta" style="--c:#6AA6D0">
+        <img class="receta__img" src="assets/web/botella-tobala.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Wild Tobalá</p>
+        <h3 class="receta__name">Tobalá &amp; Tónica</h3>
+        <p class="receta__ing" data-i18n="tobalaIng">45 ml Wild Tobalá · agua tónica · mandarina · romero</p>
+        <p class="receta__met" data-i18n="tobalaMet">Sobre hielo, exprime mandarina y aromatiza con romero.</p>
+      </article>
+      <article class="receta" style="--c:#9E3F4B">
+        <img class="receta__img" src="assets/web/botella-barril.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Wild Barril</p>
+        <h3 class="receta__name">Barril Negroni</h3>
+        <p class="receta__ing" data-i18n="barrilIng">30 ml Wild Barril · 30 ml vermut rojo · 30 ml Campari · naranja</p>
+        <p class="receta__met" data-i18n="barrilMet">Revuelve con hielo, cuela y termina con cáscara de naranja.</p>
+      </article>
+      <article class="receta" style="--c:#BE9A70">
+        <img class="receta__img" src="assets/web/botella-coyote.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Wild Coyote</p>
+        <h3 class="receta__name">Coyote Old Fashioned</h3>
+        <p class="receta__ing" data-i18n="coyoteIng">50 ml Wild Coyote · néctar de agave · amargo de mole · naranja</p>
+        <p class="receta__met" data-i18n="coyoteMet">Revuelve con hielo y expresa los aceites de la naranja.</p>
+      </article>
+      <article class="receta" style="--c:#6BAC88">
+        <img class="receta__img" src="assets/web/botella-cuishe.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Wild Cuishe</p>
+        <h3 class="receta__name">Cuishe Highball</h3>
+        <p class="receta__ing" data-i18n="cuisheIng">45 ml Wild Cuishe · refresco de toronja · limón</p>
+        <p class="receta__met" data-i18n="cuisheMet">Sobre hielo, alarga con toronja y un toque de limón.</p>
+      </article>
+      <article class="receta" style="--c:#F585B4">
+        <img class="receta__img" src="assets/web/botella-guerrero.webp" alt="" aria-hidden="true" loading="lazy" />
+        <p class="eyebrow">Guerrero</p>
+        <h3 class="receta__name">Guerrero, derecho</h3>
+        <p class="receta__ing" data-i18n="guerreroIng">60 ml Guerrero · a temperatura ambiente · naranja con sal de gusano</p>
+        <p class="receta__met" data-i18n="guerreroMet">Sírvelo derecho en copita; acompaña con nueces.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════  FICHAS TÉCNICAS  ════════════════════════════ -->
+<section class="fichas" id="fichas">
+  <div class="wrap">
+    <header class="sec-head sec-head--center reveal">
+      <p class="eyebrow" data-i18n="fichasEyebrow">Documentación</p>
+      <h2 class="h-title" data-i18n="fichasT">Fichas técnicas</h2>
+      <p class="sec-head__sub" data-i18n="fichasSub">Descarga la ficha técnica de cada maguey en PDF, lista para imprimir.</p>
+    </header>
+    <ul class="fichas__grid reveal">
+      <li class="fichac" style="--c:#4C463C">
+        <span class="fichac__n">I</span>
+        <h3 class="fichac__t">Wild Cupreata</h3>
+        <p class="fichac__v" data-i18n="fichasCupreataV">Agave Cupreata silvestre</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Cupreata-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Cupreata-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Cupreata-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+      <li class="fichac" style="--c:#234B6B">
+        <span class="fichac__n">II</span>
+        <h3 class="fichac__t">Wild Tobalá</h3>
+        <p class="fichac__v" data-i18n="fichasTobalaV">Agave Tobalá silvestre</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Tobala-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Tobala-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Tobala-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+      <li class="fichac" style="--c:#6B1A2C">
+        <span class="fichac__n">III</span>
+        <h3 class="fichac__t">Wild Barril</h3>
+        <p class="fichac__v" data-i18n="fichasBarrilV">Agave Barril silvestre</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Barril-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Barril-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Barril-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+      <li class="fichac" style="--c:#6B4636">
+        <span class="fichac__n">IV</span>
+        <h3 class="fichac__t">Wild Coyote</h3>
+        <p class="fichac__v" data-i18n="fichasCoyoteV">Agave Americana (Coyote)</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Coyote-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Coyote-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Coyote-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+      <li class="fichac" style="--c:#33603F">
+        <span class="fichac__n">V</span>
+        <h3 class="fichac__t">Wild Cuishe</h3>
+        <p class="fichac__v" data-i18n="fichasCuisheV">Agave Cuishe silvestre</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Cuishe-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Cuishe-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Cuishe-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+      <li class="fichac" style="--c:#8E3560">
+        <span class="fichac__n">VI</span>
+        <h3 class="fichac__t">Guerrero</h3>
+        <p class="fichac__v" data-i18n="fichasGuerreroV">Agave Cupreata &middot; alta graduación</p>
+        <a class="fichac__dl" target="_blank" rel="noopener" data-i18n="fichasDl"
+           data-href-es="assets/FichasTecnincas/Mezcal-Mayalen-Guerrero-Ficha-ES.pdf"
+           data-href-en="assets/TechSheets/Mezcal-Mayalen-Guerrero-Ficha-EN.pdf"
+           href="assets/FichasTecnincas/Mezcal-Mayalen-Guerrero-Ficha-ES.pdf">Descargar PDF</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════  CORRESPONDENCIA  ════════════════════════════ -->
+<section class="corr" id="correspondencia">
+  <div class="wrap corr__in">
+    <div class="corr__text reveal">
+      <p class="eyebrow" data-i18n="corrEyebrow">Escríbenos</p>
+      <h2 class="h-title" data-i18n="corrTitle">Contacto</h2>
+      <p data-i18n="corrP">Para pedidos y distribución, déjanos un mensaje y te contestamos pronto.</p>
+
+      <dl class="specimen specimen--wide">
+        <div><dt data-i18n="corrSocial">Instagram</dt><dd><a href="https://www.instagram.com/mezcal_mayalen/" target="_blank" rel="noopener">@mezcal_mayalen</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/Mezcal-Mayalen-111902392310928/" target="_blank" rel="noopener">Mezcal Mayalen</a></dd></div>
+        <div><dt>Pinterest</dt><dd><a href="https://www.pinterest.com.mx/kristofferson/mezcal-mayalen/" target="_blank" rel="noopener">mezcal-mayalen</a></dd></div>
+      </dl>
+    </div>
+
+    <form class="carta reveal" id="carta" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="carta__row">
+        <label class="campo"><span data-i18n="cName">Nombre</span><input type="text" name="nombre" autocomplete="given-name" required /></label>
+        <label class="campo"><span data-i18n="cLast">Apellido</span><input type="text" name="apellido" autocomplete="family-name" /></label>
+      </div>
+      <label class="campo"><span data-i18n="cMail">Correo</span><input type="email" name="email" autocomplete="email" required /></label>
+      <label class="campo"><span data-i18n="cMsg">Mensaje</span><textarea name="mensaje" rows="5" required></textarea></label>
+      <button class="btn" type="submit" data-i18n="cSend">Enviar</button>
+      <p class="carta__aviso" id="cartaAviso" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ════════════════════════════  COLOFÓN  ════════════════════════════ -->
+<footer class="colofon">
+  <div class="wrap">
+    <img class="colofon__sello" src="assets/web/logo-hero.webp" alt="Mezcal Mayalen" width="900" height="900" loading="lazy" />
+    <p class="colofon__word">Mezcal Mayalen</p>
+    <p class="eyebrow colofon__tag" data-i18n="colofonTag">Mezcal joven &middot; Artesanal y orgánico &middot; Hecho en México</p>
+    <p class="colofon__legal" data-i18n="colofonLegal">Disfrútalo con moderación. Venta exclusiva para mayores de edad.</p>
+    <p class="colofon__copy">&copy; <span id="anio">2026</span> Mezcal Mayalen</p>
+  </div>
+</footer>
+
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

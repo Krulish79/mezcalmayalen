@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Heavy source / working files (not for the web)
+assets/agavesreal/
+*.psd
+*.ai
+
+# Editor/tmp
+_ficha.html
+*.tmp
