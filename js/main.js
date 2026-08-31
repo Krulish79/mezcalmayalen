@@ -59,6 +59,7 @@
     cuadernoP1: 'Our brand began with the intention of creating a drink for friends and family by focusing on the selection of mature wild agave plants.',
     cuadernoP2: 'We acquired a rustic distillery, known as a palenque, that had been active since 1949 in the mountains of Guerrero, where to this day we enjoy the artisanal culture of our Maestros Mezcaleros whose knowledge of mezcal making has been passed down as part of their family heritage.',
     cuadernoP3: 'The operation of the process is meticulously supervised by our Maestros Mezcaleros. We respect the uniqueness of each batch and its original essence. Our product is 100% artisanal and organic.',
+    cuadernoOwned: 'A 100% Mexican company. Family established and family owned.',
 
     dato1:   'Palenque founded',
     dato2:   'Agaves',
