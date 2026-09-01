@@ -325,8 +325,8 @@ p{margin:0 0 1.15em;text-wrap:pretty;}
 .plate__index{display:flex;gap:.8rem;align-items:baseline;font-family:var(--text);
   font-size:1.17rem;font-variant-caps:all-small-caps;letter-spacing:.13em;color:var(--accent);margin:0 0 1.5rem;}
 .plate__index span:last-child{color:color-mix(in srgb,var(--pale) 45%,transparent);}
-.plate__local{font-family:var(--text);font-variant-caps:all-small-caps;letter-spacing:.2em;
-  font-size:1.05rem;font-weight:500;color:var(--gold);margin:0 0 .55rem;}
+.plate__local{font-family:var(--text);font-style:italic;font-size:1.05rem;
+  color:var(--gold);margin:0 0 .35rem;}
 .plate[data-agave="cupreata"] .plate__local{color:var(--accent);}
 .plate__name{font-family:var(--text);font-weight:400;font-variant-caps:all-small-caps;
   letter-spacing:.1em;font-size:clamp(2.5rem,1.3rem + 3.9vw,4.7rem);line-height:.82;margin:0 0 .7rem;color:var(--pale);}
