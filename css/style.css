@@ -246,9 +246,9 @@ p{margin:0 0 1.15em;text-wrap:pretty;}
 .plate__ficha{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.7rem;
   font-family:var(--text);font-variant-caps:all-small-caps;letter-spacing:.16em;font-size:.98rem;
   color:var(--pale);text-decoration:none;}
-.plate__ficha::before{content:"";width:38px;height:2px;background:var(--accent);
+.plate__ficha::before{content:"";width:38px;height:2px;background:var(--gold);
   flex:0 0 auto;transition:width .4s var(--ease);}
-.plate__ficha::after{content:"\2193";color:var(--accent);font-size:1.05em;}
+.plate__ficha::after{content:"\2193";color:var(--gold);font-size:1.05em;}
 .plate__ficha:hover{color:#fff;}
 .plate__ficha:hover::before{width:60px;}
 .diptico figcaption{margin-top:.8rem;font-family:var(--text);font-style:italic;font-size:.96rem;color:var(--ash);}
@@ -325,8 +325,8 @@ p{margin:0 0 1.15em;text-wrap:pretty;}
 .plate__index{display:flex;gap:.8rem;align-items:baseline;font-family:var(--text);
   font-size:1.17rem;font-variant-caps:all-small-caps;letter-spacing:.13em;color:var(--accent);margin:0 0 1.5rem;}
 .plate__index span:last-child{color:color-mix(in srgb,var(--pale) 45%,transparent);}
-.plate__local{font-family:var(--text);font-style:italic;font-size:1.05rem;
-  color:var(--gold);margin:0 0 .35rem;}
+.plate__local{font-family:var(--text);font-variant-caps:all-small-caps;letter-spacing:.2em;
+  font-size:1.05rem;font-weight:500;color:var(--gold);margin:0 0 .55rem;}
 .plate[data-agave="cupreata"] .plate__local{color:var(--accent);}
 .plate__name{font-family:var(--text);font-weight:400;font-variant-caps:all-small-caps;
   letter-spacing:.1em;font-size:clamp(2.5rem,1.3rem + 3.9vw,4.7rem);line-height:.82;margin:0 0 .7rem;color:var(--pale);}
