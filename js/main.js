@@ -316,4 +316,19 @@
   /* ────────────────────────────  AÑO  ───────────────────────────── */
   $('#anio').textContent = String(new Date().getFullYear());
 
+
+  /* ──────────────────  AUTOPLAY DE VIDEOS  ──────────────────────── */
+  // Algunos navegadores no inician el autoplay hasta la primera interacción.
+  function reproducirVideos() {
+    $$('video[autoplay]').forEach(function (v) {
+      v.muted = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+  reproducirVideos();
+  ['click', 'touchstart', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, reproducirVideos, { once: true, passive: true });
+  });
+
 })();
