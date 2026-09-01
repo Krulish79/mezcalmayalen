@@ -242,13 +242,15 @@ p{margin:0 0 1.15em;text-wrap:pretty;}
 .diptico figure{margin:0;}
 .diptico img,.diptico__vid{width:100%;border:1px solid var(--hair);aspect-ratio:3/2;object-fit:cover;display:block;}
 
-/* enlace de ficha técnica en cada lámina */
-.plate__ficha{display:inline-block;margin-top:1.6rem;font-family:var(--text);
-  font-variant-caps:all-small-caps;letter-spacing:.16em;font-size:.92rem;color:var(--gold);
-  text-decoration:none;padding-bottom:.14rem;border-bottom:1px solid rgba(203,162,85,.4);
-  transition:border-color .4s var(--ease);}
-.plate__ficha::after{content:" \2193";}
-.plate__ficha:hover{border-bottom-color:var(--gold);}
+/* enlace de ficha técnica en cada lámina — con línea del color del agave */
+.plate__ficha{display:inline-flex;align-items:center;gap:.75rem;margin-top:1.7rem;
+  font-family:var(--text);font-variant-caps:all-small-caps;letter-spacing:.16em;font-size:.98rem;
+  color:var(--pale);text-decoration:none;}
+.plate__ficha::before{content:"";width:38px;height:2px;background:var(--accent);
+  flex:0 0 auto;transition:width .4s var(--ease);}
+.plate__ficha::after{content:"\2193";color:var(--accent);font-size:1.05em;}
+.plate__ficha:hover{color:#fff;}
+.plate__ficha:hover::before{width:60px;}
 .diptico figcaption{margin-top:.8rem;font-family:var(--text);font-style:italic;font-size:.96rem;color:var(--ash);}
 
 .cuaderno__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
