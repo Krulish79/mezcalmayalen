@@ -22,6 +22,7 @@
     navCorrespondencia:'Contact',
     navGaleria:        'Gallery',
     navReceta:         'Cocktails',
+    plateFicha:        'Download tech sheet',
     navFichas:         'Tech sheets',
     fichasEyebrow:     'Documentation',
     fichasT:           'Technical sheets',
